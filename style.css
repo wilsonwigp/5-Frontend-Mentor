@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+/*- Mobile: 375px
+fontsize:18px;
+    <!--    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); } -->
+- Desktop: 1440px*/
+
+
+:root{
+--Light_red: hsl(0, 100%, 67%);
+--Orangey_yellow: hsl(39, 100%, 56%);
+--Green_teal: hsl(166, 100%, 37%);
+--Cobalt_blue: hsl(234, 85%, 45%);
+/*Background*/
+--Light_slate_blue: hsl(252, 100%, 67%);
+--Light_royal_blue: hsl(241, 81%, 54%);
+/*Circle*/
+--Violet_blue: hsla(256, 72%, 46%, 1);
+--Persian_blue: hsla(241, 72%, 46%, 0);
+/*Neutral*/
+--White: hsl(0, 0%, 100%);
+--Pale_blue: hsl(221, 100%, 96%);
+--Light_lavender: hsl(241, 100%, 89%);
+--ms-flex-direction: hsl(224, 30%, 27%);
+
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family:"Hanken Grotesk",sans-serif;
+    min-height: 100vh;
+    max-width: 100%;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    box-shadow:1px 10px 20px hsla(224, 30%, 27%, .3) ;
+
+}
+.first-container{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    background: linear-gradient(to bottom,var(--Light_slate_blue),var(--Light_royal_blue));
+    border-radius: 20px ;
+    padding:32px 45px;
+    align-items: center;
+}
+
+.your-result{
+    font-size: 16px;
+    color:var(--Light_lavender);
+}
+.pointss{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    margin:16px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom,var(--Violet_blue),var(--Persian_blue));
+}
+.pointss h2{
+    color:white;
+    font-size:48px;
+}
+.pointss span{
+    color:var(--Light_lavender);
+    font-weight: bold;
+}
+.great{
+    font-size:22px;
+    color:var(--Pale_blue);
+    margin-bottom:8px;
+}
+.first-container p{
+    text-align: center;
+    color:var(--Light_lavender);
+    font-weight: 500;
+}
+.card-description{
+    display: flex;
+    flex-direction: column;
+    padding:16px 32px;
+    gap:14px;
+    width: 50%;
+}
+.card-description-title{
+    color:var(--ms-flex-direction);
+    font-size: 16px;
+    font-weight: 700;
+}
+.card-description-item{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius:10px;
+    padding: 12px;
+}
+.card-description-head-holder{
+    display: flex;
+    gap:8px;
+}
+
+.card-description-item span{
+    color:var(--ms-flex-direction);
+}
+.card-description-item span span{
+
+    color:black;
+}
+#reaction-description{
+    background-color: hsla(0, 100%, 67%, .2);
+    color:var(--Light_red);
+}
+#memory-description{
+    background-color: hsla(39, 100%, 56%, .2);
+    color:var(--Orangey_yellow);
+}
+#verbal-description{
+    background-color: hsla(166, 100%, 37%, .2);
+    color:var(--Green_teal);
+}
+#visual-description{
+    background-color: hsla(234, 85%, 45%, .2);
+    color:var(--Cobalt_blue);
+}   
+.card-description-item-name{
+    font-size:14px;
+}
+a{
+    text-decoration: none;
+}
+.card-description-button{
+    padding:12px 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color:var(--Pale_blue);
+    background-color: var(--ms-flex-direction);
+    text-align:center;
+    font-weight: 500;
+    border-radius: 30px;
+}
+.card-description-button:hover,active{
+    background: linear-gradient(to bottom,var(--Light_slate_blue),var(--Light_royal_blue));
+}
+
+@media(max-width:768px)
+{
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .first-container{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        margin:0 auto;
+    }
+    .card-description{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin:0 auto;
+    }
+}
